@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>To be greeted</title>
+	<link rel="stylesheet" type="text/css" href="greet.css">
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="zone container">
+		<nav class="zone header">
+		<h1>The Greetings Counter</h1>
+		</nav>
+	
+		<input class="nameString" name="string" id="name" placeholder="enter your name here">
+		<button class="greetBtn" id="greet">Greet Me!</button>
+		<br>
+		<br>
+		<div>
+			<input type="radio" id="buttons" value= "English" name="lang" checked>
+			<label for="eng">English</label>
+
+			<input type="radio" id="buttons" value= "Espanol" name="lang">
+			<label for="esp">Español</label>
+
+			<input type="radio" id="buttons" value= "Japanese" name="lang">
+			<label for="jap">Japanese</label>
+		</div>
+		<p id="theGreet"></p>
+		<div>
+		<h1 id="theCount"></h1>      
+		</div>   
+		<button onclick="deleteItems()">Clear</button>
+	</div>
+</body>
+
+<script src="greet-factory.js"></script>
+<script src="greet.js"></script>
+</html>
