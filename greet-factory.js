@@ -27,7 +27,7 @@ function TheGreetFunction(){
 			JSON.parse(localStorage.getItem("array")).length - 1;
 		}
 		else if(arrayNames.includes(nameEntered)){
-			alert("Name already entered")
+		
 		}
 		// else if(arrayNames.includes(nameEntered)){
 		// 	alert("Name already entered")

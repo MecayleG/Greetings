@@ -42,6 +42,7 @@ function myFunction(){
 }
 function deleteItems(){
 	localStorage.clear();
+	count.innerHTML = 0;
 }
 greetButton.addEventListener("click", myFunction);
 	
