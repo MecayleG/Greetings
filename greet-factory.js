@@ -10,7 +10,7 @@ function TheGreetFunction(){
 		if(valSelected === "English"){
 		 return ("Hello, " + theName);
 		}
-		else if(valSelected === "Espanol"){
+		else if(valSelected === "Español"){
 		return ("Hola, " + theName);
 		}
 		else if(valSelected === "Japanese"){
