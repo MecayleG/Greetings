@@ -1,8 +1,6 @@
 function TheGreetFunction(){
 
-	 
-	
-// Get input from user
+	 // Get input from user and greet in language selected
 		function langButton(valSelected, theName){
 		if(theName === ""){
 			return("enter name!") 
