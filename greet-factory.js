@@ -15,9 +15,16 @@ function TheGreetFunction(){
 		return ("Kon'nichiwa, " + theName);
 		}
 	}
-
-	
+	function namesStored(nameEntered, arrayNames){
+	// if user input(name) has never been entered and user input is not empty push to localStorage
+		if(!arrayNames.includes(nameEntered) && nameEntered !== ""){
+			arrayNames.push(nameEntered)
+			
+			return arrayNames;
+		}
+	} 
 	return{
 		langButton,
+		namesStored
 	}
 }
