@@ -1,5 +1,6 @@
 function TheGreetFunction(){
 
+
 	 // Get input from user and greet in language selected
 		function langButton(valSelected, theName){
 		if(theName === ""){
@@ -17,14 +18,15 @@ function TheGreetFunction(){
 	}
 	function namesStored(nameEntered, arrayNames){
 	// if user input(name) has never been entered and user input is not empty push to localStorage
-		if(!arrayNames.includes(nameEntered) && nameEntered !== ""){
-			arrayNames.push(nameEntered)
+		if(!arrayNames.array.includes(nameEntered) && nameEntered !== ""){
+			arrayNames.array.push(nameEntered)
 			
-			return arrayNames;
+			
 		}
+		return arrayNames;
 	} 
 	return{
 		langButton,
-		namesStored
+		namesStored,
 	}
 }

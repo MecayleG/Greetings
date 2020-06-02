@@ -6,7 +6,7 @@ const nameString = document.querySelector(".nameString");
 const msg = document.getElementById("theGreet");
 const count = document.getElementById("theCount");
 // if localStorage is undefined set default to empty array
-var arrayNames = JSON.parse(localStorage.getItem("names")) || [];
+const arrayNames = JSON.parse(localStorage.getItem("data")) || {array : []};
 
 
 function myFunction(){
@@ -14,11 +14,11 @@ function myFunction(){
 	// all names will go into localStorage as lower case.
 	// convert a list to string
 	//list returned from greetFunction.namesStored is saved in localStorage
-	localStorage.setItem("names", JSON.stringify(greetFunction.namesStored(inputVal.toLowerCase(), arrayNames)));
+	localStorage.setItem("data", JSON.stringify(greetFunction.namesStored(inputVal.toLowerCase(), arrayNames)));
 	var valSelected =  document.querySelector("input[name='lang']:checked").value;
 	 msg.innerHTML = greetFunction.langButton(valSelected, inputVal);
-	 count.innerHTML = JSON.parse(localStorage.getItem("names")).length; //getting list of names from localStorage and displaying.
-		nameString.value = "";
+	 count.innerHTML = JSON.parse(localStorage.getItem("data")).array.length //getting list of names from localStorage and displaying.
+	nameString.value = "";
 	 
 	 
 	
@@ -26,6 +26,7 @@ function myFunction(){
 	// button to clear localStorage
 function deleteItems(){
 	localStorage.clear();
+	location.reload();
 	count.innerHTML = 0;
 }
 greetButton.addEventListener("click", myFunction);
