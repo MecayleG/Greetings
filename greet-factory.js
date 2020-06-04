@@ -1,5 +1,6 @@
-function TheGreetFunction(){
+function TheGreetFunction(greetedNames){
 
+	const TheGreetedNames = greetedNames || [];
 
 	 // Get input from user and greet in language selected
 		function langButton(valSelected, theName){
@@ -16,17 +17,24 @@ function TheGreetFunction(){
 		return ("Kon'nichiwa, " + theName);
 		}
 	}
-	function namesStored(nameEntered, arrayNames){
+	function namesStored(nameEntered){
 	// if user input(name) has never been entered and user input is not empty push to localStorage
-		if(!arrayNames.array.includes(nameEntered) && nameEntered !== ""){
-			arrayNames.array.push(nameEntered)
-			
-			
+		if(!TheGreetedNames.includes(nameEntered) && nameEntered !== ""){
+			TheGreetedNames.push(nameEntered)
 		}
-		return arrayNames;
-	} 
+      }
+	function counter(){
+		return TheGreetedNames.length
+	}
+	function alreadyGreeted(){
+		return TheGreetedNames;
+	}
+	
+
 	return{
 		langButton,
 		namesStored,
+		counter,
+		alreadyGreeted
 	}
 }
