@@ -27,6 +27,7 @@ function TheGreetFunction(greetedNames){
 		return TheGreetedNames.length
 	}
 	function alreadyGreeted(){
+		console.log(TheGreetedNames)
 		return TheGreetedNames;
 	}
 	

@@ -14,7 +14,7 @@ function myFunction(){
 	var inputVal = nameString.value;
 	var valSelected = document.querySelector("input[name='lang']:checked").value;
 	msg.innerHTML = greetFunction.langButton(valSelected, inputVal);
-	greetFunction.namesStored(inputVal.toLowerCase());
+	var theName = greetFunction.namesStored(inputVal.toLowerCase());
 	count.innerHTML = greetFunction.counter(); 
 	nameString.value = "";
 	localStorage["names"] = JSON.stringify(greetFunction.alreadyGreeted())
