@@ -23,6 +23,15 @@ function TheGreetFunction(greetedNames){
 			TheGreetedNames.push(nameEntered)
 		}
       }
+     function lettersOnly(inputTxt){
+     	var letters =/[^A-Za-z]/g;
+     	if(inputTxt !== ""){
+     		var allLetters = inputTxt.replace(letters, "");
+     		var allSmall = allLetters.toLowerCase();
+     		return allSmall;
+     	}
+     	return "";
+     } 
 	function counter(){
 		return TheGreetedNames.length
 	}
@@ -35,6 +44,7 @@ function TheGreetFunction(greetedNames){
 	return{
 		langButton,
 		namesStored,
+		lettersOnly,
 		counter,
 		alreadyGreeted
 	}

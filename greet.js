@@ -13,11 +13,18 @@ const count = document.getElementById("theCount");
 function myFunction(){
 	var inputVal = nameString.value;
 	var valSelected = document.querySelector("input[name='lang']:checked").value;
-	msg.innerHTML = greetFunction.langButton(valSelected, inputVal);
-	var theName = greetFunction.namesStored(inputVal.toLowerCase());
-	count.innerHTML = greetFunction.counter(); 
+	var theName = greetFunction.lettersOnly(inputVal)
+	if( theName !== ""){
+		msg.innerHTML = greetFunction.langButton(valSelected, theName);
+		greetFunction.namesStored(theName); 
+		localStorage["names"] = JSON.stringify(greetFunction.alreadyGreeted())
+	}
+	else{
+		msg.innerHTML = "enter name!"
+	}
+	count.innerHTML = greetFunction.counter();
 	nameString.value = "";
-	localStorage["names"] = JSON.stringify(greetFunction.alreadyGreeted())
+	
 }
 // button to clear localStorage
 function deleteItems(){
